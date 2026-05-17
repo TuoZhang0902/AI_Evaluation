@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EvalBoard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>EvalBoard</h1>
+      <p>Upload or paste evaluation counts to calculate model metrics.</p>
+
+      <label>Project Name</label>
+      <input id="projectName" value="chip_defect" />
+
+      <div class="grid">
+        <div>
+          <label>True Positive</label>
+          <input id="tp" type="number" value="20" />
+        </div>
+        <div>
+          <label>False Positive</label>
+          <input id="fp" type="number" value="5" />
+        </div>
+        <div>
+          <label>False Negative</label>
+          <input id="fn" type="number" value="3" />
+        </div>
+        <div>
+          <label>True Negative</label>
+          <input id="tn" type="number" value="40" />
+        </div>
+      </div>
+
+      <button onclick="evaluateModel()">Evaluate</button>
+    </section>
+
+    <section class="card">
+      <h2>Metrics</h2>
+      <div id="metrics"></div>
+
+      <h2>Report</h2>
+      <p id="report"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
